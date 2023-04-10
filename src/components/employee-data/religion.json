@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_employee_data_religions",
+  "info": {
+    "displayName": "religion"
+  },
+  "options": {},
+  "attributes": {
+    "buddhist": {
+      "type": "integer"
+    },
+    "christian": {
+      "type": "integer"
+    },
+    "hindu": {
+      "type": "integer"
+    },
+    "jewish": {
+      "type": "integer"
+    },
+    "muslim": {
+      "type": "integer"
+    },
+    "sikh": {
+      "type": "integer"
+    },
+    "other": {
+      "type": "integer"
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tests",
+  "info": {
+    "singularName": "test",
+    "pluralName": "tests",
+    "displayName": "test",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "test": {
+      "type": "component",
+      "repeatable": true,
+      "component": "mytest.test"
+    }
+  }
+}

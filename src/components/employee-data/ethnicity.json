@@ -1,0 +1,40 @@
+{
+  "collectionName": "components_employee_data_ethnicities",
+  "info": {
+    "displayName": "ethnicity",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "asian": {
+      "type": "integer"
+    },
+    "asianBritish": {
+      "type": "integer"
+    },
+    "black": {
+      "type": "integer"
+    },
+    "african": {
+      "type": "integer"
+    },
+    "caribbean": {
+      "type": "integer"
+    },
+    "blackBritish": {
+      "type": "integer"
+    },
+    "mixed": {
+      "type": "integer"
+    },
+    "multipleEthnicGroups": {
+      "type": "integer"
+    },
+    "white": {
+      "type": "integer"
+    },
+    "other": {
+      "type": "integer"
+    }
+  }
+}

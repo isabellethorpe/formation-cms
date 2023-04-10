@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_employee_data_genders",
+  "info": {
+    "displayName": "gender",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "female": {
+      "type": "integer"
+    },
+    "male": {
+      "type": "integer"
+    },
+    "intersex": {
+      "type": "integer"
+    },
+    "nonbinary": {
+      "type": "integer"
+    },
+    "transgender": {
+      "type": "integer"
+    },
+    "other": {
+      "type": "integer"
+    }
+  }
+}

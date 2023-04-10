@@ -1,0 +1,40 @@
+{
+  "collectionName": "components_employee_data_ages",
+  "info": {
+    "displayName": "age",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "sixteenToTwentyFour": {
+      "type": "integer"
+    },
+    "twentyFiveToTwentyNine": {
+      "type": "integer"
+    },
+    "thirtyToThirtyFour": {
+      "type": "integer"
+    },
+    "thirtyFiveToThirtyNine": {
+      "type": "integer"
+    },
+    "fourtyToFourtyFour": {
+      "type": "integer"
+    },
+    "fourtyFiveToFourtyNine": {
+      "type": "integer"
+    },
+    "fiftyToFiftyFour": {
+      "type": "integer"
+    },
+    "fiftyFiveToFiftyNine": {
+      "type": "integer"
+    },
+    "sixtyToSixtyFour": {
+      "type": "integer"
+    },
+    "sixtyFivePlus": {
+      "type": "integer"
+    }
+  }
+}

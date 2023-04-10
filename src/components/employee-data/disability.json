@@ -1,0 +1,36 @@
+{
+  "collectionName": "components_employee_data_disabilities",
+  "info": {
+    "displayName": "disability"
+  },
+  "options": {},
+  "attributes": {
+    "blindOrSightLoss": {
+      "type": "integer"
+    },
+    "deafOrHearingLoss": {
+      "type": "integer"
+    },
+    "mobility": {
+      "type": "integer"
+    },
+    "manualDexterity": {
+      "type": "integer"
+    },
+    "learningDisability": {
+      "type": "integer"
+    },
+    "mentalHealthConcern": {
+      "type": "integer"
+    },
+    "speechImpairment": {
+      "type": "integer"
+    },
+    "cognitiveDisability": {
+      "type": "integer"
+    },
+    "other": {
+      "type": "integer"
+    }
+  }
+}
