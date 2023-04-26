@@ -1,0 +1,67 @@
+{
+  "kind": "collectionType",
+  "collectionName": "industries",
+  "info": {
+    "singularName": "industry",
+    "pluralName": "industries",
+    "displayName": "industry",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "ethnicityMinorityPercentage": {
+      "type": "decimal"
+    },
+    "ageAverage": {
+      "type": "integer"
+    },
+    "disabilityPercentage": {
+      "type": "decimal"
+    },
+    "genderMinorityPercentage": {
+      "type": "decimal"
+    },
+    "sexualOrientationMinorityPercentage": {
+      "type": "decimal"
+    },
+    "seniorGenderMinorityPercentage": {
+      "type": "decimal"
+    },
+    "seniorEthnicityMinorityPercentage": {
+      "type": "decimal"
+    },
+    "seniorAgeAverage": {
+      "type": "integer"
+    },
+    "seniorSexualOrientationMinorityPercentage": {
+      "type": "decimal"
+    },
+    "seniorDisabilityPercentage": {
+      "type": "decimal"
+    },
+    "malePercentage": {
+      "type": "decimal"
+    },
+    "femalePercentage": {
+      "type": "decimal"
+    },
+    "seniorMalePercentage": {
+      "type": "decimal"
+    },
+    "seniorFemalePercentage": {
+      "type": "decimal"
+    },
+    "companies": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::company-setting.company-setting",
+      "inversedBy": "industryBenchmarks"
+    }
+  }
+}

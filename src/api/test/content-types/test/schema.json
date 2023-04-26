@@ -8,7 +8,7 @@
     "description": ""
   },
   "options": {
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {
@@ -16,6 +16,11 @@
       "type": "component",
       "repeatable": true,
       "component": "mytest.test"
+    },
+    "test1": {
+      "type": "component",
+      "repeatable": true,
+      "component": "mytest.test1"
     }
   }
 }

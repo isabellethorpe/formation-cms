@@ -33,7 +33,7 @@
     "white": {
       "type": "integer"
     },
-    "other": {
+    "enthnicityOther": {
       "type": "integer"
     }
   }

@@ -42,8 +42,16 @@
       "repeatable": true,
       "component": "employee-data.sexual-orientation"
     },
-    "employeeTotal": {
-      "type": "integer"
+    "overview": {
+      "type": "component",
+      "repeatable": true,
+      "component": "employee-data.overview"
+    },
+    "company_setting": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::company-setting.company-setting",
+      "inversedBy": "employees"
     }
   }
 }

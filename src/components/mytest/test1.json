@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_mytest_test1s",
+  "info": {
+    "displayName": "test1"
+  },
+  "options": {},
+  "attributes": {
+    "hellotest1": {
+      "type": "integer"
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_employee_data_overviews",
+  "info": {
+    "displayName": "overview",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "employeeTotal": {
+      "type": "integer"
+    },
+    "date": {
+      "type": "date"
+    }
+  }
+}

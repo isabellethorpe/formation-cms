@@ -1,7 +1,8 @@
 {
   "collectionName": "components_employee_data_disabilities",
   "info": {
-    "displayName": "disability"
+    "displayName": "disability",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -29,7 +30,7 @@
     "cognitiveDisability": {
       "type": "integer"
     },
-    "other": {
+    "disabilityOther": {
       "type": "integer"
     }
   }
