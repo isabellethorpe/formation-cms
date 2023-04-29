@@ -28,7 +28,7 @@ COPY ./ .
 # Build the Strapi CMS
 RUN yarn build
 
-# Expose port 1337 woo test
+# Expose port 1337 
 EXPOSE 1337
 
 # Start Strapi in development mode
