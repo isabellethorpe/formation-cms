@@ -25,7 +25,7 @@ jobs:
       #   run: npm test
 
       # docker build instead of a next build - building nextjs app inside docker container
-      # this runs the Dockerfile
+      # this runs the Dockerfile!
       - name: Build Next.js application
         run: docker build -t formation-cms .
 
