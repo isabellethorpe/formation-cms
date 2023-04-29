@@ -18,16 +18,16 @@ jobs:
         with:
           node-version: 18
 
-      # - name: Install dependencies
-      #   run: yarn install
+      - name: Install dependencies
+        run: yarn install
 
       # - name: Run tests
       #   run: npm test
 
       # docker build instead of a next build - building nextjs app inside docker container
       # this runs the Dockerfile!
-      # - name: Build Next.js application
-      #   run: docker build -t formation-cms .
+      - name: Build Next.js application
+        run: docker build -t formation-cms .
 
       - name: Setup AWS CLI
         uses: aws-actions/configure-aws-credentials@v1
@@ -43,5 +43,5 @@ jobs:
 
       - name: Deploy to AWS Lightsail
         run: |
-          # aws lightsail push-container-image --region eu-west-2 --service-name ${{ secrets.LIGHTSAIL_CONTAINER_SERVICE_NAME }} --label formation-cms --image formation-cms:latest
+          aws lightsail push-container-image --region eu-west-2 --service-name ${{ secrets.LIGHTSAIL_CONTAINER_SERVICE_NAME }} --label formation-cms --image formation-cms:latest
           aws lightsail create-container-service-deployment --region eu-west-2 --service-name ${{ secrets.LIGHTSAIL_CONTAINER_SERVICE_NAME }} --containers ${{ secrets.DEPLOYMENT_CONFIG }} --public-endpoint file://public-endpoints.json
