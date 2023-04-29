@@ -1,0 +1,47 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v2
+        with:
+          node-version: 18
+
+      - name: Install dependencies
+        run: npm install
+
+      # - name: Run tests
+      #   run: npm test
+
+      # docker build instead of a next build - building nextjs app inside docker container
+      # this runs the Dockerfile
+      - name: Build Next.js application
+        run: docker build -t formation-cms .
+
+      - name: Setup AWS CLI
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: eu-west-2
+
+      - name: Install LightsailCTL
+        run: |
+          curl "https://s3.us-west-2.amazonaws.com/lightsailctl/latest/linux-amd64/lightsailctl" -o "/usr/local/bin/lightsailctl"
+          sudo chmod +x /usr/local/bin/lightsailctl
+
+      - name: Deploy to AWS Lightsail
+        run: |
+          aws lightsail push-container-image --region eu-west-2 --service-name ${{ secrets.LIGHTSAIL_CONTAINER_SERVICE_NAME }} --label formation-cms --image formation-cms:latest
+          aws lightsail create-container-service-deployment --region eu-west-2 --service-name ${{ secrets.LIGHTSAIL_CONTAINER_SERVICE_NAME }} --containers file://containers.json --public-endpoint file://public-endpoints.json
