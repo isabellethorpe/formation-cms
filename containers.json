@@ -1,9 +1,0 @@
-{
-  "formation-cms": {
-    "image": ":formationcmscontainer.formation-cms.latest",
-    "ports": {
-      "1337": "HTTP"
-    },
-    "environment": {}
-  }
-}
