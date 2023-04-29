@@ -44,4 +44,4 @@ jobs:
       - name: Deploy to AWS Lightsail
         run: |
           aws lightsail push-container-image --region eu-west-2 --service-name ${{ secrets.LIGHTSAIL_CONTAINER_SERVICE_NAME }} --label formation-cms --image formation-cms:latest
-          aws lightsail create-container-service-deployment --region eu-west-2 --service-name ${{ secrets.LIGHTSAIL_CONTAINER_SERVICE_NAME }} --containers ${{ secrets.DEPLOYMENT_CONFIG }} --public-endpoint file://public-endpoints.json
+          aws lightsail create-container-service-deployment --region eu-west-2 --service-name ${{ secrets.LIGHTSAIL_CONTAINER_SERVICE_NAME }} --containers '${{ secrets.DEPLOYMENT_CONFIG }}' --public-endpoint file://public-endpoints.json
