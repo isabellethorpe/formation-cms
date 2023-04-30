@@ -1,10 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "employee_characteristics",
+  "collectionName": "employees",
   "info": {
-    "singularName": "employee-characteristic",
-    "pluralName": "employee-characteristics",
-    "displayName": "employee-characteristic",
+    "singularName": "employee",
+    "pluralName": "employees",
+    "displayName": "employee",
     "description": ""
   },
   "options": {
@@ -12,6 +12,12 @@
   },
   "pluginOptions": {},
   "attributes": {
+    "date": {
+      "type": "date"
+    },
+    "employeeTotal": {
+      "type": "integer"
+    },
     "age": {
       "type": "component",
       "repeatable": true,
@@ -32,25 +38,15 @@
       "repeatable": true,
       "component": "employee-data.gender"
     },
-    "religion": {
-      "type": "component",
-      "repeatable": true,
-      "component": "employee-data.religion"
-    },
     "sexualOrientation": {
       "type": "component",
       "repeatable": true,
       "component": "employee-data.sexual-orientation"
     },
-    "overview": {
-      "type": "component",
-      "repeatable": true,
-      "component": "employee-data.overview"
-    },
-    "company_setting": {
+    "company": {
       "type": "relation",
       "relation": "manyToOne",
-      "target": "api::company-setting.company-setting",
+      "target": "api::company.company",
       "inversedBy": "employees"
     }
   }

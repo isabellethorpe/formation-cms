@@ -63,19 +63,11 @@
       "inversedBy": "users",
       "configurable": false
     },
-    "userRole": {
-      "type": "enumeration",
-      "enum": [
-        "senior_management",
-        "hr",
-        "recruitment"
-      ]
-    },
-    "company_setting": {
+    "company": {
       "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::company-setting.company-setting",
-      "inversedBy": "user"
+      "relation": "manyToOne",
+      "target": "api::company.company",
+      "inversedBy": "users"
     }
   }
 }

@@ -12,7 +12,7 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "title": {
+    "name": {
       "type": "string"
     },
     "ethnicityMinorityPercentage": {
@@ -59,9 +59,9 @@
     },
     "companies": {
       "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::company-setting.company-setting",
-      "inversedBy": "industryBenchmarks"
+      "relation": "oneToMany",
+      "target": "api::company.company",
+      "mappedBy": "industry"
     }
   }
 }
